@@ -1,5 +1,8 @@
-import { ScrollView, StatusBar, StyleSheet, Text, View } from "react-native";
+import { FlatList, Image, ScrollView, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { dataProduto } from "../../data/dataProduto";
+import { TipoProduto } from "../../tipos/tipoProdutos";
+import { ExibirProdutos } from "../../components/produto";
 
 export default function ScreenInicio(){
     return(
@@ -8,9 +11,15 @@ export default function ScreenInicio(){
                 <View style={styles.area_maisVendidos}>
                     <Text style={styles.text_maisVendidos}>Mais Vendidos</Text>
 
-                    <ScrollView>
                         
-                    </ScrollView>
+                        <FlatList 
+                            data={dataProduto}
+                            keyExtractor={(item) => item.id.toLocaleString()}
+                            renderItem={({item}: {item:TipoProduto}) => (
+                                <ExibirProdutos itemProduto={item}/>
+                            )}
+                        />
+                        
                 </View>
         </SafeAreaView>
 
@@ -26,8 +35,9 @@ const styles = StyleSheet.create({
     },
 
     area_maisVendidos: {
+        alignItems: 'center',
         width: '100%',
-        height: 350,
+        height: 450,
         borderWidth: 1,
         borderColor: "#BC6C25"
     },
@@ -39,5 +49,5 @@ const styles = StyleSheet.create({
         fontSize: 30,
         fontWeight: 'bold',
         color: '#DDA15E'
-    }
+    },
 })
