@@ -61,13 +61,13 @@ const styles = StyleSheet.create({
     tituloLoja: {
         fontSize: 30,
         fontWeight: 'bold',
-        color: 'yellow'
+        color: '#DDA15E'
     },
 
     sloganLoja: {
         fontSize: 20,
         fontWeight: 'bold',
-        color: 'yellow'
+        color: '#DDA15E'
     },
 
     area_imagemLoja: {
