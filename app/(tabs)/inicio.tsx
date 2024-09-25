@@ -1,26 +1,53 @@
-import { FlatList, Image, ScrollView, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Dimensions, FlatList, Image, ScrollView, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { dataProduto } from "../../data/dataProduto";
-import { TipoProduto } from "../../tipos/tipoProdutos";
-import { ExibirProdutos } from "../../components/produto";
+import { data_maisVendidos, data_promocao } from "../../data/dataProduto";
+import { Tipo_maisVendido } from "../../types/tipo_produto";
+import { Tipo_promocao } from "../../types/tipo_produto";
+import { Exibir_maisVendidos } from "../../components/maisVendidos";
+import { ExibirPromocao } from "../../components/promocao";
+
+
+const screenWidth = Dimensions.get('window').width;
 
 export default function ScreenInicio(){
     return(
         <SafeAreaView style={styles.container}>
             <StatusBar />
-                <View style={styles.area_maisVendidos}>
-                    <Text style={styles.text_maisVendidos}>Mais Vendidos</Text>
+            <Image 
+                style={styles.imgInicial}
+            />
 
-                        
-                        <FlatList 
-                            data={dataProduto}
-                            keyExtractor={(item) => item.id.toLocaleString()}
-                            renderItem={({item}: {item:TipoProduto}) => (
-                                <ExibirProdutos itemProduto={item}/>
-                            )}
-                        />
-                        
-                </View>
+                <ScrollView>
+                    <View style={styles.area_maisVendidos}>
+                        <Text style={styles.text_maisVendidos}>MAIS VENDIDOS</Text>
+                            <FlatList 
+                                data={data_maisVendidos}
+                                keyExtractor={(item) => item.id.toLocaleString()}
+                                renderItem={({item}: {item:Tipo_maisVendido}) => (
+                                    <Exibir_maisVendidos itemProduto={item}/>
+                                )}
+                                horizontal={true}
+                                snapToAlignment="center"
+                                decelerationRate={'fast'}
+                                pagingEnabled={true}
+                            />
+                    </View>
+
+                    <View style={styles.area_promocao}>
+                        <Text style={styles.text_promocao}>PROMOCÃO</Text>
+                            <FlatList 
+                                data={data_promocao}
+                                keyExtractor={(item) => item.id.toLocaleString()}
+                                renderItem={({item}: {item:Tipo_promocao}) => (
+                                    <ExibirPromocao itemProduto={item}/>
+                                )}
+                                horizontal={true}
+                                snapToAlignment="center"
+                                decelerationRate={'fast'}
+                                pagingEnabled={true}
+                            />
+                    </View>
+                </ScrollView>         
         </SafeAreaView>
 
     )
@@ -34,20 +61,53 @@ const styles = StyleSheet.create({
         backgroundColor: '#FEFAE0'
     },
 
+    imgInicial: {
+        width: '100%',
+        height: 200,
+        backgroundColor: '#283618',
+    },
+
     area_maisVendidos: {
         alignItems: 'center',
-        width: '100%',
+        justifyContent: 'center',
+        width: screenWidth,
         height: 450,
-        borderWidth: 1,
-        borderColor: "#BC6C25"
+        marginTop: 15,
+        borderWidth: 0,
+        borderColor: 'blue',
+        gap: 10
     },
 
     text_maisVendidos: {
         textAlign: 'center',
-        width:'100%',
-        backgroundColor: '#283618',
+        width: 280,
+        borderWidth: 5,
+        borderColor: '#DDA15E',
+        borderRadius: 50,
         fontSize: 30,
         fontWeight: 'bold',
-        color: '#DDA15E'
+        color: '#283618'
+    },
+
+    area_promocao: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: screenWidth,
+        height: 450,
+        marginTop: 50,
+        borderWidth: 0,
+        borderColor: 'blue',
+        gap: 10
+    },
+
+    text_promocao: {
+        textAlign: 'center',
+        width: 200,
+        borderWidth: 5,
+        borderColor: '#DDA15E',
+        borderRadius: 50,
+        fontSize: 30,
+        fontWeight: 'bold',
+        color: '#283618'
     },
 })

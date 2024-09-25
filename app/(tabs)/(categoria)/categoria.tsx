@@ -1,13 +1,21 @@
-import { StatusBar, StyleSheet, Text, View } from "react-native";
+import { FlatList, Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { data_categoria } from "../../../data/dataCategoria";
+import { Tipo_categoria } from "../../../types/tipo_categoria";
+import { Exibir_categoria } from "../../../components/categoria";
 
 export default function ScreenInicio(){
     return(
         <SafeAreaView style={styles.container}>
             <StatusBar />
-                <View>
-                    <Text>Tela Categoria</Text>
-                </View>
+                <FlatList 
+                    data={data_categoria}
+                    keyExtractor={(item) => item.id.toLocaleString()}
+                    renderItem={({item}: {item:Tipo_categoria}) => (
+                            <Exibir_categoria categoria={item}/>
+                    )}
+
+                />
         </SafeAreaView>
 
     )

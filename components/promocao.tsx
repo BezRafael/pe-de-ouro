@@ -1,12 +1,14 @@
-import { dataProduto } from "../data/dataProduto";
-import { TipoProduto } from "../tipos/tipoProdutos";
-import { Image, Text, View, StyleSheet, TouchableOpacity } from "react-native";
+import { data_promocao } from "../data/dataProduto";
+import { Tipo_promocao } from "../types/tipo_produto";
+import { Image, Text, View, StyleSheet, TouchableOpacity, Dimensions } from "react-native";
 
 type Props = {
-    itemProduto: TipoProduto
+    itemProduto: Tipo_promocao
 }
 
-export const ExibirProdutos = ({ itemProduto }: Props) => {
+const screenWidth = Dimensions.get('window').width;
+
+export const ExibirPromocao = ({ itemProduto }: Props) => {
     return(
         <TouchableOpacity style={styles.area_produto}>
             <Image 
@@ -14,10 +16,9 @@ export const ExibirProdutos = ({ itemProduto }: Props) => {
                 source={{uri: itemProduto.fotoProduto}}
             />
             <Text style={styles.nome_produto}>{itemProduto.nomeProduto}</Text>
-            <Text style={styles.categoria_produto}>{itemProduto.categoriaProduto}</Text>
-            <Text style={styles.preco_produto}>{itemProduto.precoProduto}</Text>
+            <Text style={styles.preco_antigo}>{itemProduto.precoAntigo.toFixed(2)}</Text>
+            <Text style={styles.novo_preco}>{itemProduto.novoPreco.toFixed(2)}</Text>
         </TouchableOpacity>
-
     )
 }
 
@@ -32,15 +33,15 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        borderWidth: 1,
-        borderColor: 'red',
-        width: 350,
+        borderWidth: 0,
+        borderRadius: 20,
+        width: screenWidth,
         height: '100%',
     },
 
     img_produto: {
         borderWidth: 1,
-        borderColor: '#BC6C25',
+        borderColor: 'transparent',
         width: 300,
         height: 300
     },
@@ -51,15 +52,15 @@ const styles = StyleSheet.create({
         color: '#283618'
     },
 
-    categoria_produto:{
+    preco_antigo:{
         fontSize: 18,
         fontWeight: 'bold',
-        color: '#DDA15E'
+        color: '#fc545471'
     },
 
-    preco_produto:{
+    novo_preco:{
         fontSize: 18,
         fontWeight: 'bold',
-        color: '#283618'
+        color: '#05c705'
     },
 })
