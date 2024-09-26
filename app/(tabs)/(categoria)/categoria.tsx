@@ -14,7 +14,7 @@ export default function ScreenInicio(){
                     renderItem={({item}: {item:Tipo_categoria}) => (
                             <Exibir_categoria categoria={item}/>
                     )}
-
+                    contentContainerStyle={styles.flatlist}
                 />
         </SafeAreaView>
 
@@ -24,8 +24,15 @@ export default function ScreenInicio(){
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#FEFAE0'
+    },
+
+    flatlist: {
+        gap: 20,
+        borderWidth: 0,
+        borderColor: 'red',
+        height: '100%',
+        justifyContent: 'center'
     },
 })

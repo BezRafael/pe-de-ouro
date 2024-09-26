@@ -13,6 +13,7 @@ export default function ScreenInicio(){
     return(
         <SafeAreaView style={styles.container}>
             <StatusBar />
+             
             <Image 
                 style={styles.imgInicial}
             />
@@ -61,21 +62,21 @@ const styles = StyleSheet.create({
         backgroundColor: '#FEFAE0'
     },
 
+
     imgInicial: {
         width: '100%',
         height: 200,
         backgroundColor: '#283618',
     },
 
+
     area_maisVendidos: {
         alignItems: 'center',
-        justifyContent: 'center',
         width: screenWidth,
-        height: 450,
+        height: 350,
         marginTop: 15,
         borderWidth: 0,
         borderColor: 'blue',
-        gap: 10
     },
 
     text_maisVendidos: {
@@ -93,11 +94,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         width: screenWidth,
-        height: 450,
-        marginTop: 50,
+        height: 360,
+        marginTop: 30,
         borderWidth: 0,
         borderColor: 'blue',
-        gap: 10
     },
 
     text_promocao: {

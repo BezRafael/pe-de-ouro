@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderWidth: 0,
+        borderColor: 'red',
         borderRadius: 20,
         width: screenWidth,
         height: '100%',
@@ -42,24 +43,24 @@ const styles = StyleSheet.create({
     img_produto: {
         borderWidth: 1,
         borderColor: 'transparent',
-        width: 300,
-        height: 300
+        width: 200,
+        height: 200
     },
 
     nome_produto: {
-        fontSize: 28,
+        fontSize: 22,
         fontWeight: 'bold',
         color: '#283618'
     },
 
     preco_antigo:{
-        fontSize: 18,
+        fontSize: 15,
         fontWeight: 'bold',
-        color: '#fc545471'
+        color: 'red'
     },
 
     novo_preco:{
-        fontSize: 18,
+        fontSize: 22,
         fontWeight: 'bold',
         color: '#05c705'
     },

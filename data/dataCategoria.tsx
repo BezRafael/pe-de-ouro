@@ -5,12 +5,12 @@ export const data_categoria:Tipo_categoria[] = [
     {
         id: 1,
         tituloCategoria: 'Masculinos',
-        imagemCategoria: 'veesve'
+        imagemCategoria: 'a'
     },
     {
         id: 2,
         tituloCategoria: 'Feminino',
-        imagemCategoria: 'veesve'
+        imagemCategoria: 'a'
     },
     {
         id: 3,

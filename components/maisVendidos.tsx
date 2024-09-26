@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderWidth: 0,
-        borderColor: 'transparent',
+        borderColor: 'red',
         width: screenWidth,
         height: '100%',
     },
@@ -43,12 +43,12 @@ const styles = StyleSheet.create({
     img_produto: {
         borderWidth: 1,
         borderColor: 'transparent',
-        width: 300,
-        height: 300
+        width: 200,
+        height: 200
     },
 
     nome_produto: {
-        fontSize: 28,
+        fontSize: 22,
         fontWeight: 'bold',
         color: '#283618'
     },

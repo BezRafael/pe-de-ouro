@@ -25,17 +25,16 @@ const styles = StyleSheet.create({
     areaCaregoria: {
         width: 320,
         height: 150,
-        borderWidth: 0,
-        borderColor: 'red',
-        
     },
 
     imagem_categoria: {
         width: '100%',
         height: '100%',
-        backgroundColor: '#030353',
-        opacity: 0.5,
-        borderRadius: 10
+        backgroundColor: '#DDA15E',
+        borderWidth: 4,
+        borderRadius: 11,
+        borderColor: '#283618',
+        opacity: 0.9,
     },
 
     area_tituloCategoria: {
