@@ -1,7 +1,7 @@
 import { StatusBar, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-export default function ScreenInicio(){
+export default function ScreenSobre(){
     return(
         <SafeAreaView style={styles.container}>
             <StatusBar />

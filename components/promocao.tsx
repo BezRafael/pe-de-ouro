@@ -16,8 +16,8 @@ export const ExibirPromocao = ({ itemProduto }: Props) => {
                 source={{uri: itemProduto.fotoProduto}}
             />
             <Text style={styles.nome_produto}>{itemProduto.nomeProduto}</Text>
-            <Text style={styles.preco_antigo}>{itemProduto.precoAntigo.toFixed(2)}</Text>
-            <Text style={styles.novo_preco}>{itemProduto.novoPreco.toFixed(2)}</Text>
+            <Text style={styles.preco_antigo}>R${itemProduto.precoAntigo.toFixed(2)}</Text>
+            <Text style={styles.novo_preco}>R${itemProduto.novoPreco.toFixed(2)}</Text>
         </TouchableOpacity>
     )
 }

@@ -1,3 +1,4 @@
+import { Link } from "expo-router";
 import { data_maisVendidos } from "../data/dataProduto";
 import { Tipo_maisVendido } from "../types/tipo_produto";
 import { Image, Text, View, StyleSheet, TouchableOpacity, Dimensions } from "react-native";
@@ -10,15 +11,17 @@ const screenWidth = Dimensions.get('window').width;
 
 export const Exibir_maisVendidos = ({ itemProduto }: Props) => {
     return(
-        <TouchableOpacity style={styles.area_produto}>
-            <Image 
-                style={styles.img_produto}
-                source={{uri: itemProduto.fotoProduto}}
-            />
-            <Text style={styles.nome_produto}>{itemProduto.nomeProduto}</Text>
-            <Text style={styles.categoria_produto}>{itemProduto.categoriaProduto}</Text>
-            <Text style={styles.preco_produto}>{itemProduto.precoProduto.toFixed(2)}</Text>
-        </TouchableOpacity>
+        <Link href={`/produto/${itemProduto.id}`} asChild>
+            <TouchableOpacity style={styles.area_produto}>
+                <Image 
+                    style={styles.img_produto}
+                    source={{uri: itemProduto.fotoProduto}}
+                />
+                <Text style={styles.nome_produto}>{itemProduto.nomeProduto}</Text>
+                <Text style={styles.categoria_produto}>{itemProduto.categoriaProduto}</Text>
+                <Text style={styles.preco_produto}>R${itemProduto.precoProduto.toFixed(2)}</Text>
+            </TouchableOpacity>
+        </Link>
 
     )
 }

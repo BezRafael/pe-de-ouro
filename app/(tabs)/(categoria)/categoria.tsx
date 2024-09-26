@@ -1,21 +1,13 @@
-import { FlatList, Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StatusBar, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { data_categoria } from "../../../data/dataCategoria";
-import { Tipo_categoria } from "../../../types/tipo_categoria";
-import { Exibir_categoria } from "../../../components/categoria";
 
-export default function ScreenInicio(){
+export default function ScreenCategoria(){
     return(
         <SafeAreaView style={styles.container}>
             <StatusBar />
-                <FlatList 
-                    data={data_categoria}
-                    keyExtractor={(item) => item.id.toLocaleString()}
-                    renderItem={({item}: {item:Tipo_categoria}) => (
-                            <Exibir_categoria categoria={item}/>
-                    )}
-                    contentContainerStyle={styles.flatlist}
-                />
+                <View>
+                    <Text>Tela Categoria</Text>
+                </View>
         </SafeAreaView>
 
     )
@@ -24,15 +16,8 @@ export default function ScreenInicio(){
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#FEFAE0'
-    },
-
-    flatlist: {
-        gap: 20,
-        borderWidth: 0,
-        borderColor: 'red',
-        height: '100%',
-        justifyContent: 'center'
     },
 })
