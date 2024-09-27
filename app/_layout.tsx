@@ -8,7 +8,8 @@ export default function Layout() {
       }}>
         <Stack.Screen name="index"/>
         <Stack.Screen name="(tabs)"/>
-        <Stack.Screen name="produto/[id]"/>
+        <Stack.Screen name="produto/maisVendidos/[id]"/>
+        <Stack.Screen name="produto/promocao/[id]"/>
     </Stack>
   );
 }

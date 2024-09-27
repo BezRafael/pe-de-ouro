@@ -1,3 +1,4 @@
+import { Link } from "expo-router";
 import { data_promocao } from "../data/dataProduto";
 import { Tipo_promocao } from "../types/tipo_produto";
 import { Image, Text, View, StyleSheet, TouchableOpacity, Dimensions } from "react-native";
@@ -10,15 +11,17 @@ const screenWidth = Dimensions.get('window').width;
 
 export const ExibirPromocao = ({ itemProduto }: Props) => {
     return(
-        <TouchableOpacity style={styles.area_produto}>
-            <Image 
-                style={styles.img_produto}
-                source={{uri: itemProduto.fotoProduto}}
-            />
-            <Text style={styles.nome_produto}>{itemProduto.nomeProduto}</Text>
-            <Text style={styles.preco_antigo}>R${itemProduto.precoAntigo.toFixed(2)}</Text>
-            <Text style={styles.novo_preco}>R${itemProduto.novoPreco.toFixed(2)}</Text>
-        </TouchableOpacity>
+        <Link href={`/produto/promocao/${itemProduto.id}`}asChild>    
+            <TouchableOpacity style={styles.area_produto}>
+                <Image 
+                    style={styles.img_produto}
+                    source={{uri: itemProduto.fotoProduto}}
+                />
+                <Text style={styles.nome_produto}>{itemProduto.nomeProduto}</Text>
+                <Text style={styles.preco_antigo}>R${itemProduto.precoAntigo.toFixed(2)}</Text>
+                <Text style={styles.novo_preco}>R${itemProduto.novoPreco.toFixed(2)}</Text>
+            </TouchableOpacity>
+        </Link>
     )
 }
 
@@ -44,7 +47,8 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'transparent',
         width: 200,
-        height: 200
+        height: 200,
+        borderRadius: 20
     },
 
     nome_produto: {

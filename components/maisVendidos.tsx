@@ -11,7 +11,7 @@ const screenWidth = Dimensions.get('window').width;
 
 export const Exibir_maisVendidos = ({ itemProduto }: Props) => {
     return(
-        <Link href={`/produto/${itemProduto.id}`} asChild>
+        <Link href={`/produto/maisVendidos/${itemProduto.id}`} asChild>
             <TouchableOpacity style={styles.area_produto}>
                 <Image 
                     style={styles.img_produto}
@@ -47,7 +47,8 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'transparent',
         width: 200,
-        height: 200
+        height: 200,
+        borderRadius: 20
     },
 
     nome_produto: {
@@ -59,7 +60,7 @@ const styles = StyleSheet.create({
     categoria_produto:{
         fontSize: 18,
         fontWeight: 'bold',
-        color: '#DDA15E'
+        color: '#BC6C25'
     },
 
     preco_produto:{
