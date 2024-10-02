@@ -21,25 +21,25 @@ export const data_categoriaProduto: Tipo_categoriaProduto = {
         },
         {
             id: 3,
-            tituloCategoria: 'Unisex',
+            tituloCategoria: 'Infantil',
             imagemCategoria: 'a'
         }
     ],
     produtos: [
         {
             id: 1,
-            idCategoria: 3,
+            idCategoria: 1,
             fotoProduto: 'https://converse.com.br/media/catalog/product/c/t/ct00010002_a_107x1_5.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:',
             nomeProduto: 'Chuck Taylor All Star Preto',
-            categoriaProduto: 'Unisex',
+            categoriaProduto: 'Masculino',
             precoProduto: 259.90
         },
         {
             id: 2,
-            idCategoria: 2,
+            idCategoria: 1,
             fotoProduto: 'https://converse.com.br/media/catalog/product/c/t/ct00010002_a_107x1_5.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:',
             nomeProduto: 'Chuck Taylor All Star Preto',
-            categoriaProduto: 'Unisex',
+            categoriaProduto: 'Masculino',
             precoProduto: 259.90
         },
         {
@@ -47,7 +47,7 @@ export const data_categoriaProduto: Tipo_categoriaProduto = {
             idCategoria: 1,
             fotoProduto: 'https://converse.com.br/media/catalog/product/c/t/ct00010002_a_107x1_5.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:',
             nomeProduto: 'Chuck Taylor All Star Preto',
-            categoriaProduto: 'Unisex',
+            categoriaProduto: 'Masculino',
             precoProduto: 259.90
         }
     ]

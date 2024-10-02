@@ -1,6 +1,7 @@
 import { Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { data_categoria } from "../data/dataCategoria";
+import { data_categoriaProduto } from "../data/dataCategoria";
 import { Tipo_categoria } from "../types/tipo_categoria";
+import { router } from "expo-router";
 
 
 type Props = {
@@ -8,8 +9,14 @@ type Props = {
 }
 
 export const Exibir_categoria = ({categoria}: Props) => {
+
+    const click = () => {
+        router.navigate(`/(categoria)/${categoria.id}`)
+    }
+
+
     return(
-        <TouchableOpacity style={styles.areaCaregoria}>
+        <TouchableOpacity style={styles.areaCaregoria} onPress={click}>
             <Image 
                 style={styles.imagem_categoria}
                 source={{uri: categoria.imagemCategoria}}

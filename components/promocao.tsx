@@ -11,7 +11,7 @@ const screenWidth = Dimensions.get('window').width;
 
 export const ExibirPromocao = ({ itemProduto }: Props) => {
     return(
-        <Link href={`/produto/promocao/${itemProduto.id}`}asChild>    
+        <Link href={`/produtos/promocao/${itemProduto.id}`}asChild>    
             <TouchableOpacity style={styles.area_produto}>
                 <Image 
                     style={styles.img_produto}

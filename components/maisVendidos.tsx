@@ -11,7 +11,7 @@ const screenWidth = Dimensions.get('window').width;
 
 export const Exibir_maisVendidos = ({ itemProduto }: Props) => {
     return(
-        <Link href={`/produto/maisVendidos/${itemProduto.id}`} asChild>
+        <Link href={`/produtos/maisVendidos/${itemProduto.id}`} asChild>
             <TouchableOpacity style={styles.area_produto}>
                 <Image 
                     style={styles.img_produto}

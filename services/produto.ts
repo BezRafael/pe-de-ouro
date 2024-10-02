@@ -15,7 +15,7 @@ export const getProdutoById = (id: number) => {
     return data_categoriaProduto.produtos.find(item => item.id == id)
 }
 
-export const getProdutoBtCategoria = (id: number) => {
+export const getProdutoByCategoria = (id: number) => {
     return data_categoriaProduto.produtos.filter(item => item.idCategoria === id)
 }
 

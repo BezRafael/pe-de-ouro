@@ -7,6 +7,7 @@ export default function Layout() {
         headerShown: false
       }}>
         <Stack.Screen name="categoria"/>
+        <Stack.Screen name='[id]'/>
     </Stack>
   );
 }
