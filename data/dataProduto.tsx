@@ -57,6 +57,20 @@ export const data_maisVendidos: Tipo_maisVendido[] = [
         categoriaProduto: 'Feminino',
         precoProduto: 209.90
     },
+    {
+        id: 9,
+        fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/4/b/4b9a3559_2.jpg',
+        nomeProduto: 'Ramarim',
+        categoriaProduto: 'Feminino',
+        precoProduto: 209.90
+    },
+    {
+        id: 10,
+        fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/4/b/4b9a3559_2.jpg',
+        nomeProduto: 'Ramarim',
+        categoriaProduto: 'Feminino',
+        precoProduto: 209.90
+    },
 ]
 
 

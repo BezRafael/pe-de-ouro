@@ -56,7 +56,7 @@ export default function ScreenSobre(){
                             <View style={styles.area_desenvolvedor}>
                                 <Image 
                                     style={styles.img_desenvovedor}
-                                    source={{uri: 'a'}}
+                                    source={{uri: 'https://avatars.githubusercontent.com/u/155703891?v=4'}}
                                 />
 
                                 <View style={styles.as}>
@@ -102,6 +102,7 @@ const styles = StyleSheet.create({
         width: 180,
         borderWidth: 1,
         borderColor: '#283618',
+        backgroundColor: '#283618',
         borderRadius: 20,
         marginLeft: 10,
         gap: 2
@@ -111,14 +112,14 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 12,
         fontWeight: 'bold',
-        color: '#283618'
+        color: '#FEFAE0'
     },
 
     paragrafo_missaoVisao: {
         textAlign: 'center',
         fontSize: 12,
         fontWeight: 'bold',
-        color: '#283618'
+        color: '#FEFAE0'
     },
 
     areaIntermediaria:{
@@ -136,6 +137,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         borderWidth: 1,
         borderColor: '#283618',
+        backgroundColor: '#283618',
         marginRight: 10,
         gap: 2
     },
@@ -144,14 +146,14 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 12,
         fontWeight: 'bold',
-        color: '#283618'
+        color: '#FEFAE0'
     },
 
     paragrafo_valores: {
         textAlign: 'center',
         fontSize: 12,
         fontWeight: 'bold',
-        color: '#283618'
+        color: '#FEFAE0'
     },
 
     areaIntermediaria2:{
@@ -169,6 +171,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         borderWidth: 1,
         borderColor: '#283618',
+        backgroundColor: '#283618',
         marginLeft: 10,
         gap: 2
     },
@@ -177,14 +180,14 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 12,
         fontWeight: 'bold',
-        color: '#283618'
+        color: '#FEFAE0'
     },
 
     paragrafo_compromisso: {
         textAlign: 'center',
         fontSize: 12,
         fontWeight: 'bold',
-        color: '#283618'
+        color: '#FEFAE0'
     },
 
     areaIntermediaria3: {
@@ -202,6 +205,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         borderWidth: 1,
         borderColor: '#283618',
+        backgroundColor: '#283618',
         marginRight: 10,
         gap: 2
     },
@@ -210,12 +214,13 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 12,
         fontWeight: 'bold',
-        color: '#283618'
+        color: '#FEFAE0'
     },
 
     areaInferior:{
         flexDirection: 'row',
         justifyContent: 'center',
+        alignItems: 'center',
         borderWidth: 0,
         borderColor: 'blue',
         width: '100%',
@@ -226,19 +231,22 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        width: 320,
+        width: 300,
+        height: 90 ,
         borderRadius: 20,
         borderWidth: 1,
         borderColor: '#283618',
+        backgroundColor: '#283618',
         marginLeft: 10,
         gap: 10 
     },
 
     img_desenvovedor: {
-        width: 90,
-        height: 90,
-        borderWidth: 1,
-        borderColor: 'red'
+        width: 50,
+        height: 50,
+        borderWidth: 0,
+        borderColor: 'red',
+        borderRadius: 50
     },
 
     as: {
@@ -250,13 +258,13 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontWeight: 'bold',
         fontSize: 16,
-        color: '#283618'
+        color: '#FEFAE0'
     },
 
     links: {
         textAlign: 'center',
         fontWeight: 'bold',
         fontSize: 13,
-        color: '#283618'
+        color: '#FEFAE0'
     }
 })

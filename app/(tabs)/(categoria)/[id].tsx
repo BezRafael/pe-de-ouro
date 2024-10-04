@@ -38,8 +38,11 @@ const styles = StyleSheet.create({
     },
 
     flatlist: {
-        marginTop: 30,
-        gap: 10
+        borderWidth: 0,
+        borderColor: 'blue',
+        gap: 10,
+        paddingTop: 10,
+        paddingBottom: 10   
     }
 
 })
