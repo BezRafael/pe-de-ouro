@@ -1,4 +1,4 @@
-import { FlatList, StatusBar, StyleSheet, Text, View } from "react-native";
+import { FlatList, ScrollView, StatusBar, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { getAllCategorias } from "../../../services/categoria";
 import { Exibir_categoria } from "../../../components/categoria";
@@ -8,13 +8,15 @@ export default function ScreenCategoria(){
 
     return(
         <SafeAreaView style={styles.container}>
-            <StatusBar />
-               <FlatList 
-                    data={categorias}
-                    renderItem={({ item }) => <Exibir_categoria categoria={item}/>}
-                    keyExtractor={( item ) => item.id.toString()}
-                    contentContainerStyle={styles.flatlist}
-               />
+            <StatusBar />                
+                <ScrollView>   
+                    <FlatList 
+                            data={categorias}
+                            renderItem={({ item }) => <Exibir_categoria categoria={item}/>}
+                            keyExtractor={( item ) => item.id.toString()}
+                            contentContainerStyle={styles.flatlist}
+                    />
+                </ScrollView>
         </SafeAreaView>
 
     )
@@ -28,10 +30,12 @@ const styles = StyleSheet.create({
     },
 
     flatlist: {
-        flex: 1,
+        height: '100%',
         gap: 15,
         borderWidth: 0,
         borderColor: 'red',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        paddingTop: 10,
+        paddingBottom: 10
     }
 })

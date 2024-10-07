@@ -30,30 +30,31 @@ export const Exibir_categoria = ({categoria}: Props) => {
 
 const styles = StyleSheet.create({
     areaCaregoria: {
-        width: 320,
-        height: 150,
+        width: 350,
+        height: 180,
+        borderBottomWidth: 3,
+        borderRadius: 10,
+        borderColor: '#283618',
     },
 
     imagem_categoria: {
-        width: '100%',
+        width: 200,
         height: '100%',
-        backgroundColor: '#DDA15E',
-        borderWidth: 4,
-        borderRadius: 11,
-        borderColor: '#283618',
-        opacity: 0.9,
+        opacity: 0.5,
+        borderRadius: 5,
     },
 
     area_tituloCategoria: {
         height: 150,
-        marginTop: -150,
+        marginTop: -165,
         justifyContent: 'center',
         alignItems: 'center'
     },
 
     titulo_categoria: {
+        marginLeft: 120,
         fontSize: 22,
-        color: '#283618',
+        color: '',
         fontWeight: 'bold'
     },
 })
