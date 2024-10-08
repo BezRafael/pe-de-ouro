@@ -205,7 +205,7 @@ export const data_categoriaProduto: Tipo_categoriaProduto = {
             id: 17,
             idCategoria: 2,
             fotoProduto: 'https://www.disantinni.com.br/on/demandware.static/-/Sites-DiSantinni/default/dw564b4fcd/images/large/85690013_02.jpg',
-            nomeProduto: 'REDIKAL',
+            nomeProduto: 'Redikal',
             categoriaProduto: 'Tênis Masculino',
             precoProduto: 179.99
         },
@@ -232,7 +232,7 @@ export const data_categoriaProduto: Tipo_categoriaProduto = {
             id: 20,
             idCategoria: 2,
             fotoProduto: 'https://www.disantinni.com.br/on/demandware.static/-/Sites-DiSantinni/default/dw0991fc7c/images/large/85456011_02.jpg',
-            nomeProduto: 'Olympikus Corre Trilha',
+            nomeProduto: 'Olympikus Corre Trilha 2',
             categoriaProduto: 'Tênis Masculino',
             precoProduto: 599.99
         },
@@ -775,6 +775,145 @@ export const data_categoriaProduto: Tipo_categoriaProduto = {
             nomeProduto: 'Bibi New Way',
             categoriaProduto: 'Infantil Masculino',
             precoProduto: 189.90
+        },
+
+        {
+        /*https://www.zariff.com.br/tenis-infantil-menina-pink-cats-v3251-rosa*/
+        
+            id: 76,
+            idCategoria: 6,
+            fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/4/b/4b9a4825_2.jpg',
+            nomeProduto: 'Pink Cats',
+            categoriaProduto: 'Infantil Feminino',
+            precoProduto: 179.90
+        },
+        {
+        /*https://www.zariff.com.br/tenis-infantil-menina-slipon-bibi-1155236-marinho-rosa*/
+        
+            id: 77,
+            idCategoria: 6,
+            fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/1/1/1155236_02.jpg',
+            nomeProduto: 'Slip On Bibi',
+            categoriaProduto: 'Infantil Feminino',
+            precoProduto: 179.90
+        },
+        {
+        /*https://www.zariff.com.br/tenis-infantil-menina-pampili-com-luz-de-led-682-060-multicolor*/
+        
+            id: 78,
+            idCategoria: 6,
+            fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/t/_/t_nis_de_led_infantil_pampili_liz_luz_sereia_yythkg_1_.jpg',
+            nomeProduto: 'Pampili Led',
+            categoriaProduto: 'Infantil Feminino',
+            precoProduto: 249.90
+        },
+        {
+        /*https://www.zariff.com.br/sandalia-infantil-grendene-23071-preto*/
+            id: 79,
+            idCategoria: 6,
+            fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/5/_/5_3_1.png',
+            nomeProduto: 'Grendene Barbie',
+            categoriaProduto: 'Infantil Feminino',
+            precoProduto: 139.90
+        },
+        {
+        /*https://www.zariff.com.br/tenis-infantil-menina-pink-cats-v4641-rosa-branco*/
+            id: 80,
+            idCategoria: 6,
+            fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/4/b/4b9a1182_2.jpg',
+            nomeProduto: 'Casual Pink Cats',
+            categoriaProduto: 'Infantil Feminino',
+            precoProduto: 179.90
+        },
+        {
+        /*https://www.zariff.com.br/sandalia-infantil-menina-pampili-742-006-dourado*/
+            id: 81,
+            idCategoria: 6,
+            fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/4/b/4b9a4247_2.jpg',
+            nomeProduto: 'Pampili',
+            categoriaProduto: 'Infantil Feminino',
+            precoProduto: 169.90
+        },
+        {
+        /*https://www.zariff.com.br/sandalia-infantil-klin-420027-preto-pink*/
+            id: 82,
+            idCategoria: 6,
+            fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/s/a/sandalia-infantil-klin-lola-027-preto-pink-purpura-verde-lima.jpg',
+            nomeProduto: 'Klin',
+            categoriaProduto: 'Infantil Feminino',
+            precoProduto: 139.90
+        },
+        {
+        /*https://www.zariff.com.br/sandalia-infantil-wordcolors-167-008-preto*/
+            id: 83,
+            idCategoria: 6,
+            fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/4/b/4b9a6839_1.jpg',
+            nomeProduto: 'Birk Word Colors',
+            categoriaProduto: 'Infantil Feminino',
+            precoProduto: 139.90
+        },
+        {
+        /*https://www.zariff.com.br/tenis-infantil-converse-ck1206-preto*/
+            id: 84,
+            idCategoria: 6,
+            fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/c/k/ck12060002_d_08x1_5.jpg',
+            nomeProduto: 'Converse Infantil',
+            categoriaProduto: 'Infantil Feminino',
+            precoProduto: 239.90
+        },
+        {
+        /*https://www.zariff.com.br/sandalia-infantil-zaxy-18770-preto-rosa*/
+            id: 85,
+            idCategoria: 6,
+            fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/p/_/p.jpg',
+            nomeProduto: 'Zaxy',
+            categoriaProduto: 'Infantil Feminino',
+            precoProduto: 84.90
+        },
+        {
+        /*https://www.zariff.com.br/sandalia-feminina-fisherman-kidy-pink*/
+            id: 86,
+            idCategoria: 6,
+            fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/4/b/4b9a7141.jpg',
+            nomeProduto: 'Fisherman Kidy',
+            categoriaProduto: 'Infantil Feminino',
+            precoProduto: 49.95
+        },
+        {
+        /*https://www.zariff.com.br/tenis-masculino-converse-ct1187-preto*/
+            id: 87,
+            idCategoria: 6,
+            fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/c/k/ck11870002_d_08x1_7.jpg',
+            nomeProduto: 'Converse All Star',
+            categoriaProduto: 'Infantil Feminino',
+            precoProduto: 299.90
+        },
+        {
+        /*https://www.zariff.com.br/tenis-infantil-olympikus-flutua-preto*/
+            id: 88,
+            idCategoria: 6,
+            fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/4/0/4061ae29-735a-405a-a239-a557d649677f.jpg',
+            nomeProduto: 'Olympikus Flutua',
+            categoriaProduto: 'Infantil Feminino',
+            precoProduto: 179.90
+        },
+        {
+        /*https://www.zariff.com.br/tenis-infantil-menina-bibi-roller-11552-preto*/
+            id: 89,
+            idCategoria: 6,
+            fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/4/b/4b9a4470_1_1.jpg',
+            nomeProduto: 'Bibi Roller',
+            categoriaProduto: 'Infantil Feminino',
+            precoProduto: 179.90
+        },
+        {
+        /*https://www.zariff.com.br/sandalia-infantil-xua-xua-217003-rosa*/
+            id: 90,
+            idCategoria: 6,
+            fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/4/b/4b9a6625_1.jpg',
+            nomeProduto: 'Xua Xua',
+            categoriaProduto: 'Infantil Feminino',
+            precoProduto: 179.90
         },
     ]
 }

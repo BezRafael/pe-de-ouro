@@ -14,9 +14,9 @@ export default function ScreenInicio(){
         <SafeAreaView style={styles.container}>
             <StatusBar />
              
-            <Image 
+            {/* <Image 
                 style={styles.imgInicial}
-            />
+            /> */}
 
                 <ScrollView>
                     <View style={styles.area_maisVendidos}>

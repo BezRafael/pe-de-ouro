@@ -2,75 +2,45 @@ import { Tipo_maisVendido, Tipo_promocao } from "../types/tipo_produto";
 
 export const data_maisVendidos: Tipo_maisVendido[] = [
     {
+    /*https://www.zariff.com.br/sandalia-feminina-dumond-4118924-preto*/
         id: 1,
-        fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/4/b/4b9a3709_3.jpg',
-        nomeProduto: 'All Star Chuck Taylos',
-        categoriaProduto: 'Masculino',
-        precoProduto: 319.90
-    },
-    {
-        id: 2,
-        fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/4/b/4b9a0639_5.jpg',
-        nomeProduto: 'Coca-Cola Casual',
-        categoriaProduto: 'Masculino',
+        fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/4/9/4969781c-f2d1-4953-9326-b8e3b9b807e3.jpg',
+        nomeProduto: 'Dumond',
+        categoriaProduto: 'Sandálias',
         precoProduto: 219.90
     },
     {
+    /*https://www.disantinni.com.br/masculino/tenis/tenis-fila-float-flux-f01r00127-85371.html?dwvar_85371_color=85371020*/
+        id: 2,
+        fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/4/b/4b9a0639_5.jpg',
+        nomeProduto: 'Fila Float Flux',
+        categoriaProduto: 'Tênis Masculino',
+        precoProduto: 499.99
+    },
+    {
+     /*https://www.disantinni.com.br/feminino/sandalia/sandalia-baixa-vira-pesponto-di-santinni-85388.html?dwvar_85388_color=85388011*/
         id: 3,
-        fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/4/b/4b9a9324_1.jpg',
-        nomeProduto: 'Mule Zariff Verniz',
-        categoriaProduto: 'Feminino',
-        precoProduto: 299.90
+        fotoProduto: 'https://www.disantinni.com.br/on/demandware.static/-/Sites-DiSantinni/default/dwba7c6b4d/images/large/85388011_02.jpg',
+        nomeProduto: 'Pesponto Di Santinni',
+        categoriaProduto: 'Sandálias',
+        precoProduto: 89.99
     },
     {
+    /*https://www.disantinni.com.br/masculino/tenis/tenis-olympikus-mescla-43534344-85451.html?dwvar_85451_color=85451025*/
         id: 4,
-        fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/t/e/tenis_coca_cola_surplay_canvas_preto_cc2400_1645_2_fde0ad729bf599ee3c75699f08488ffe.jpg',
-        nomeProduto: 'Coca-Cola Surplay Canvas',
-        categoriaProduto: 'Feminino',
-        precoProduto: 249.90
+        fotoProduto: 'https://www.disantinni.com.br/on/demandware.static/-/Sites-DiSantinni/default/dw1ad76fd1/images/large/85451025_02.jpg',
+        nomeProduto: 'Olympikus Mescla',
+        categoriaProduto: 'Tẽnis Masculino',
+        precoProduto: 229.99
     },
     {
+    /*https://www.zariff.com.br/tenis-feminino-olympikus-intuit-preto-preto*/
         id: 5,
-        fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/1/6/169871-1600-1600.jpg',
-        nomeProduto: ' Democrata Denim Joe Ultra',
-        categoriaProduto: 'Masculino',
-        precoProduto:  299.90
-    },
-    {
-        id: 6,
-        fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/h/e/headless-2193800110005u-04-baseimage-hires-headless.jpg',
-        nomeProduto: 'Schutz Chanel Slingback',
-        categoriaProduto: 'Feminino',
-        precoProduto: 689.90
-    },
-    {
-        id: 7,
-        fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/0/b/0b7ad3fc-b2a4-4413-bdb5-c56af915ad27.jpg',
-        nomeProduto: 'Slip On Democrata',
-        categoriaProduto: 'Masculino',
-        precoProduto: 249.90
-    },
-    {
-        id: 8,
-        fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/4/b/4b9a3559_2.jpg',
-        nomeProduto: 'Ramarim',
-        categoriaProduto: 'Feminino',
-        precoProduto: 209.90
-    },
-    {
-        id: 9,
-        fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/4/b/4b9a3559_2.jpg',
-        nomeProduto: 'Ramarim',
-        categoriaProduto: 'Feminino',
-        precoProduto: 209.90
-    },
-    {
-        id: 10,
-        fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/4/b/4b9a3559_2.jpg',
-        nomeProduto: 'Ramarim',
-        categoriaProduto: 'Feminino',
-        precoProduto: 209.90
-    },
+        fotoProduto: 'https://www.zariff.com.br/media/catalog/product/cache/1/image/1000x/0a294508e1c0663c95138da8b1bcfa9d/2/8/289139-1300-1300.jpg',
+        nomeProduto: 'Olympikus Intuit',
+        categoriaProduto: 'Tênis Feminino',
+        precoProduto:  239.90
+    }
 ]
 
 
@@ -105,27 +75,6 @@ export const data_promocao:Tipo_promocao[] = [
     },
     {
         id: 5,
-        fotoProduto: 'https://converse.com.br/media/catalog/product/c/t/ct00010002_a_107x1_5.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:',
-        nomeProduto: 'Chuck Taylor All Star Preto',
-        precoAntigo: 259.90,
-        novoPreco: 209.90
-    },
-    {
-        id: 6,
-        fotoProduto: 'https://converse.com.br/media/catalog/product/c/t/ct00010002_a_107x1_5.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:',
-        nomeProduto: 'Chuck Taylor All Star Preto',
-        precoAntigo: 259.90,
-        novoPreco: 209.90
-    },
-    {
-        id: 7,
-        fotoProduto: 'https://converse.com.br/media/catalog/product/c/t/ct00010002_a_107x1_5.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:',
-        nomeProduto: 'Chuck Taylor All Star Preto',
-        precoAntigo: 259.90,
-        novoPreco: 209.90
-    },
-    {
-        id: 8,
         fotoProduto: 'https://converse.com.br/media/catalog/product/c/t/ct00010002_a_107x1_5.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:',
         nomeProduto: 'Chuck Taylor All Star Preto',
         precoAntigo: 259.90,
