@@ -5,7 +5,7 @@ export default function ScreenSobre(){
     return(
         <SafeAreaView style={styles.container}>
             <StatusBar />
-                <ScrollView>
+                
                     <View style={styles.containerAreas}>
                         <View style={styles.areaSuperior}>
                             <View style={styles.area_missaoVisao}>
@@ -33,18 +33,6 @@ export default function ScreenSobre(){
                         </View>
 
                         <View style={styles.areaIntermediaria2}>
-                            <View style={styles.area_compromisso}>
-                                <Text style={styles.titulo_compromisso}>Compromisso</Text>
-
-                                <Text style={styles.paragrafo_compromisso}>
-                                "Nosso compromisso é garantir a sua satisfação. Estamos sempre 
-                                prontos para ouvir você e oferecer a melhor experiência em cada 
-                                compra."
-                                </Text>
-                            </View>
-                        </View>
-
-                        <View style={styles.areaIntermediaria3}>
                             <View style={styles.area_redeSociais}>
                                 <Text style={styles.titulo_redeSociais}>Redes Sociais</Text>
 
@@ -67,7 +55,7 @@ export default function ScreenSobre(){
                             </View>
                         </View>
                     </View>
-                </ScrollView>
+                
         </SafeAreaView>
 
     )
@@ -77,11 +65,11 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#FEFAE0',
+        justifyContent: 'center',
     },
 
     containerAreas: {
-        gap: 30,
-        alignItems: 'center',
+        gap: 10,
         borderWidth: 0,
         borderColor: 'green',
         paddingTop: 10,
@@ -165,40 +153,6 @@ const styles = StyleSheet.create({
         height: 150 
     },
 
-    area_compromisso: {
-        justifyContent: 'center',
-        width: 180,
-        borderRadius: 20,
-        borderWidth: 1,
-        borderColor: '#283618',
-        backgroundColor: '#283618',
-        marginLeft: 10,
-        gap: 2
-    },
-
-    titulo_compromisso: {
-        textAlign: 'center',
-        fontSize: 12,
-        fontWeight: 'bold',
-        color: '#FEFAE0'
-    },
-
-    paragrafo_compromisso: {
-        textAlign: 'center',
-        fontSize: 12,
-        fontWeight: 'bold',
-        color: '#FEFAE0'
-    },
-
-    areaIntermediaria3: {
-        flexDirection: 'row',
-        justifyContent: 'flex-end',
-        borderWidth: 0,
-        borderColor: 'blue',
-        width: '100%',
-        height: 150 
-    },
-
     area_redeSociais: {
         justifyContent: 'center',
         width: 180,
@@ -206,7 +160,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#283618',
         backgroundColor: '#283618',
-        marginRight: 10,
+        marginLeft: 10,
         gap: 2
     },
 
