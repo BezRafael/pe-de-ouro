@@ -5,10 +5,6 @@ import { Button, Image, StyleSheet, Text, TouchableOpacity } from "react-native"
 
 export default function ScreenProdutoId(){
 
-    function addFvorito(){
-        alert('Produto Adicionado aos Favoritos')
-    };
-
     const {id} = useLocalSearchParams();
     const idProduto = parseInt(id as string)
 
@@ -24,16 +20,9 @@ export default function ScreenProdutoId(){
                 />
 
                 <Text style={styles.nomeProduto}>{produto.nomeProduto}</Text>
+                <Text style={styles.categoriaProduto}>{produto.categoria}</Text>
                 <Text style={styles.precoAntigo}>R${produto.precoAntigo.toFixed(2)}</Text>
                 <Text style={styles.precoNovo}>R${produto.novoPreco.toFixed(2)}</Text>
-
-                <TouchableOpacity style={styles.btnFvorito} onPress={addFvorito}>
-                        <Text style={styles.textBtn}>Adicionar aos Favoritos</Text>
-                        <Image 
-                            style={styles.iconFavorito}
-                            source={require('../../../assets/icon_favorito.png')}
-                        />
-                </TouchableOpacity>
                 
                 <TouchableOpacity style={styles.btnComprar}>
                     <Text style={styles.textBtn}>Comprar</Text>
@@ -69,6 +58,12 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: 'bold',
         color: '#FEFAE0'
+    },
+
+    categoriaProduto: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: '#dda15e'
     },
 
     precoAntigo: {

@@ -1,13 +1,9 @@
 import { router, useLocalSearchParams } from "expo-router";
-import { getProdutoById } from "../../../services/produto";
+import { getProdutoByCategoria, getProdutoById } from "../../../services/produto";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Button, Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export function ScreenProdutoId(){
-
-    function addFvorito(){
-        alert('Produto Adicionado aos Favoritos')
-    };
 
     const {id} = useLocalSearchParams();
     const idProduto = parseInt(id as string)
@@ -29,14 +25,6 @@ export function ScreenProdutoId(){
                     <Text style={styles.nomeProduto}>{produto.nomeProduto}</Text>
                     <Text style={styles.categoriaProduto}>{produto.categoriaProduto}</Text>
                     <Text style={styles.precoProduto}>{produto.precoProduto}</Text>
-
-                    <TouchableOpacity style={styles.btnFvorito} onPress={addFvorito}>
-                        <Text style={styles.textBtn}>Adicionar aos Favoritos</Text>
-                        <Image 
-                            style={styles.iconFavorito}
-                            source={require('../../../assets/icon_favorito.png')}
-                        />
-                    </TouchableOpacity>
 
                     <TouchableOpacity style={styles.btnComprar}>
                         <Text style={styles.textBtn}>Comprar</Text>

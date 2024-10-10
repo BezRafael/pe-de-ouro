@@ -5,10 +5,6 @@ import { Button, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } f
 
 export default function ScreenProdutoId(){
 
-    function addFvorito(){
-        alert('Produto Adicionado aos Favoritos')
-    };
-
     const {id} = useLocalSearchParams();
     const idProduto = parseInt(id as string)
 
@@ -28,14 +24,6 @@ export default function ScreenProdutoId(){
                     <Text style={styles.nomeProduto}>{produto.nomeProduto}</Text>
                     <Text style={styles.categoriaProduto}>{produto.categoriaProduto}</Text>
                     <Text style={styles.precoProduto}>R${produto.precoProduto.toFixed(2)}</Text>
-
-                    <TouchableOpacity style={styles.btnFvorito} onPress={addFvorito}>
-                        <Text style={styles.textBtn}>Adicionar aos Favoritos</Text>
-                        <Image 
-                            style={styles.iconFavorito}
-                            source={require('../../../assets/icon_favorito.png')}
-                        />
-                    </TouchableOpacity>
                     
                     <TouchableOpacity style={styles.btnComprar}>
                         <Text style={styles.textBtn}>Comprar</Text>

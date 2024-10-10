@@ -11,6 +11,7 @@ export type Tipo_promocao = {
     id : number;
     fotoProduto: string,
     nomeProduto: string,
+    categoria: String,
     precoAntigo: number,
     novoPreco: number,
 }

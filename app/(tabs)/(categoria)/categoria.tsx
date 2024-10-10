@@ -9,14 +9,14 @@ export default function ScreenCategoria(){
     return(
         <SafeAreaView style={styles.container}>
             <StatusBar />                
-                <ScrollView>   
+                <View style={styles.areaList}>
                     <FlatList 
                             data={categorias}
                             renderItem={({ item }) => <Exibir_categoria categoria={item}/>}
                             keyExtractor={( item ) => item.id.toString()}
                             contentContainerStyle={styles.flatlist}
                     />
-                </ScrollView>
+              </View>
         </SafeAreaView>
 
     )
@@ -29,8 +29,11 @@ const styles = StyleSheet.create({
         backgroundColor: '#FEFAE0'
     },
 
+    areaList: {
+        flex: 1
+    },
+
     flatlist: {
-        height: '100%',
         gap: 15,
         borderWidth: 0,
         borderColor: 'red',

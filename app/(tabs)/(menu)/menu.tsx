@@ -1,7 +1,31 @@
+import { useState } from "react";
 import { Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function ScreenMenu(){
+
+const [areaShow1, setAreaShow1] = useState(false)
+const [areaShow2, setAreaShow2] = useState(false)
+const [areaShow3, setAreaShow3] = useState(false)
+const [areaShow4, setAreaShow4] = useState(false)
+
+function mostrar1(){
+    setAreaShow1(!areaShow1)
+}
+
+ function mostrar2(){
+    setAreaShow2(!areaShow2)
+}
+
+ function mostrar3(){
+    setAreaShow3(!areaShow3)
+}
+
+function mostrar4(){
+    setAreaShow4(!areaShow4)
+}
+
+
     return(
         <SafeAreaView style={styles.container}>
             <StatusBar />
@@ -11,7 +35,7 @@ export default function ScreenMenu(){
                     <View style={styles.areaFAQ}>
                         <Text style={styles.tituloFAQ}>FAQ (Perguntas Frequentes)</Text>
 
-                        <TouchableOpacity style={styles.btnPergunta}>
+                        <TouchableOpacity style={styles.btnPergunta} onPress={mostrar1}>
                             <Text style={styles.text_bntPergunta}>Como realizar uma Compra</Text>
                             <Image 
                                 style={styles.imgBtn}
@@ -19,7 +43,21 @@ export default function ScreenMenu(){
                             />
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.btnPergunta}>
+                        {areaShow1 === true ?
+                          <View style={styles.area_maisInfo}>
+                            <Text style={styles.text_maisInfo}>
+                               * Navegue pelas seções do app, como "Início" ou "Categorias", e explore os produtos disponíveis.
+                            </Text> 
+                            <Text style={styles.text_maisInfo}>* Ao encontrar o produto desejado, clique nele para ver mais detalhes.</Text> 
+                            <Text style={styles.text_maisInfo}>* Clique em Comprar. E você será redirecionado ao chat do Whatsapp.</Text> 
+                            <Text style={styles.text_maisInfo}>* Nele você irá inserir informações como: "dados de entrega e escolha o método de pagamento".</Text> 
+                            <Text style={styles.text_maisInfo}>* Após confirmar todos essses passos. Seu compra será finalizada.</Text>
+                          </View>
+                          : null
+                        }
+
+
+                        <TouchableOpacity style={styles.btnPergunta} onPress={mostrar2}>
                             <Text style={styles.text_bntPergunta}>Como devolver o Produto</Text>
                             <Image 
                                 style={styles.imgBtn}
@@ -27,13 +65,55 @@ export default function ScreenMenu(){
                             />
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.btnPergunta}>
+                        {areaShow2 === true ?
+                          <View style={styles.area_maisInfo}>
+                            <Text style={styles.text_maisInfo}>
+                               * Primeiramente, clique no botão Atendimento via (Chat) ou Suporte via (Email)
+                            </Text> 
+                            <Text style={styles.text_maisInfo}>* Fale com o atendente para saber como funciona a devolução de acordo com sua Situação.</Text> 
+                            <Text style={styles.text_maisInfo}>* Lembrando que, a devolução só será possível caso o produto ainda possua sua etiqueta e esteja em boas condições.</Text>
+                          </View>
+                          : null
+                        }
+
+
+                        <TouchableOpacity style={styles.btnPergunta} onPress={mostrar3}>
                             <Text style={styles.text_bntPergunta}>Quais as formas de pagamento Aceitas</Text>
                             <Image 
                                 style={styles.imgBtn}
                                 source={require('../../../assets/icon_setaParaBaixo.png')}
                             />
                         </TouchableOpacity>
+
+
+                        {areaShow3 === true ?
+                          <View style={styles.area_maisInfo}>
+                            <Text style={styles.text_maisInfo}>* Cartões de Crédito;</Text> 
+                            <Text style={styles.text_maisInfo}>* Cartões de Débito;</Text> 
+                            <Text style={styles.text_maisInfo}>* Pix.</Text> 
+                          </View>
+                          : null
+                        }
+
+
+                        <TouchableOpacity style={styles.btnPergunta} onPress={mostrar4}>
+                            <Text style={styles.text_bntPergunta}>Locais de Entrega</Text>
+                            <Image 
+                                style={styles.imgBtn}
+                                source={require('../../../assets/icon_setaParaBaixo.png')}
+                            />
+                        </TouchableOpacity>
+
+
+                        {areaShow4 === true ?
+                          <View style={styles.area_maisInfo}>
+                            <Text style={styles.text_maisInfo}>* Entragamos por Toda Natal</Text> 
+                            <Text style={styles.text_maisInfo}>* Lembrando que o valor do frete é ajustado de acordo com o local de entrega.</Text>  
+                          </View>
+                          : null
+                        }
+
+
                     </View>
 
                     <View style={styles.area_atendimentoCliente}>
@@ -113,6 +193,21 @@ const styles = StyleSheet.create({
         height: 20,
         marginRight: 5
     },
+
+    area_maisInfo:{
+        width: '100%',
+        backgroundColor: '#283618',
+        borderRadius: 20,
+        padding: 10,
+        gap: 10
+    },
+    
+    text_maisInfo: {
+        textAlign: 'justify',
+        fontSize: 13,
+        fontWeight: 'bold',
+        color: 'white'
+      },
 
     area_atendimentoCliente: {
         justifyContent: 'center',

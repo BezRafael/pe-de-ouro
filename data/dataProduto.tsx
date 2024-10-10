@@ -49,6 +49,7 @@ export const data_promocao:Tipo_promocao[] = [
         id: 1,
         fotoProduto: 'https://converse.com.br/media/catalog/product/c/t/ct00010002_a_107x1_5.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:',
         nomeProduto: 'Chuck Taylor All Star Preto',
+        categoria: 'Masculino',
         precoAntigo: 259.90,
         novoPreco: 209.90
     },
@@ -56,6 +57,7 @@ export const data_promocao:Tipo_promocao[] = [
         id: 2,
         fotoProduto: 'https://converse.com.br/media/catalog/product/c/t/ct00010002_a_107x1_5.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:',
         nomeProduto: 'Chuck Taylor All Star Preto',
+        categoria: 'a',
         precoAntigo: 259.90,
         novoPreco: 209.90
     },
@@ -63,6 +65,7 @@ export const data_promocao:Tipo_promocao[] = [
         id: 3,
         fotoProduto: 'https://converse.com.br/media/catalog/product/c/t/ct00010002_a_107x1_5.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:',
         nomeProduto: 'Chuck Taylor All Star Preto',
+        categoria: 'a',
         precoAntigo: 259.90,
         novoPreco: 209.90
     },
@@ -70,6 +73,7 @@ export const data_promocao:Tipo_promocao[] = [
         id: 4,
         fotoProduto: 'https://converse.com.br/media/catalog/product/c/t/ct00010002_a_107x1_5.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:',
         nomeProduto: 'Chuck Taylor All Star Preto',
+        categoria: 'a',
         precoAntigo: 259.90,
         novoPreco: 209.90
     },
@@ -77,6 +81,7 @@ export const data_promocao:Tipo_promocao[] = [
         id: 5,
         fotoProduto: 'https://converse.com.br/media/catalog/product/c/t/ct00010002_a_107x1_5.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:',
         nomeProduto: 'Chuck Taylor All Star Preto',
+        categoria: 'a',
         precoAntigo: 259.90,
         novoPreco: 209.90
     },
