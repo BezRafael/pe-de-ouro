@@ -8,7 +8,7 @@ type Props = {
 
 export const ProdutoCategoria = ({produto}: Props) => {
     return(
-        <Link href={`/produtos/produto/${produto.id}`} asChild>
+        <Link href={`/produtos/produto/${produto.id}`}asChild>
             <TouchableOpacity style={styles.areaProduto}>
                 <Image 
                     style={styles.imagemProduto}
