@@ -1,5 +1,6 @@
-import { Image, ScrollView, StatusBar, StyleSheet, Text, View } from "react-native";
+import { Image, ScrollView, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { btn_linkedin } from "../../services/links";
 
 export default function ScreenSobre(){
     return(
@@ -41,18 +42,17 @@ export default function ScreenSobre(){
                         </View>
 
                         <View style={styles.areaInferior}>
-                            <View style={styles.area_desenvolvedor}>
+                            <TouchableOpacity style={styles.area_desenvolvedor} onPress={btn_linkedin}>
                                 <Image 
                                     style={styles.img_desenvovedor}
                                     source={{uri: 'https://avatars.githubusercontent.com/u/155703891?v=4'}}
                                 />
 
-                                <View style={styles.as}>
+                                <View>
                                     <Text style={styles.nomeDesenvolvedor}>Desenvolvedor: Rafael</Text>
-                                    <Text style={styles.links}>Email: rafaelb120934@gmail.com</Text>
                                     <Text style={styles.links}>Linkedin: Rafael Bezerra</Text>
                                 </View>
-                            </View>
+                            </TouchableOpacity>
                         </View>
                     </View>
                 
@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        width: 300,
+        width: 250,
         height: 90 ,
         borderRadius: 20,
         borderWidth: 1,
@@ -202,11 +202,6 @@ const styles = StyleSheet.create({
         borderColor: 'red',
         borderRadius: 50
     },
-
-    as: {
-        gap: 10,
-        flexDirection: 'column'
-    }, 
 
     nomeDesenvolvedor: {
         textAlign: 'center',

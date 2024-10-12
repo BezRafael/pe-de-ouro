@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, Linking, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { btn_chatWhatsapp, btn_suporteEmail } from "../../../services/links";
 
 export default function ScreenMenu(){
 
@@ -24,8 +25,6 @@ function mostrar1(){
 function mostrar4(){
     setAreaShow4(!areaShow4)
 }
-
-
     return(
         <SafeAreaView style={styles.container}>
             <StatusBar />
@@ -117,11 +116,11 @@ function mostrar4(){
                     </View>
 
                     <View style={styles.area_atendimentoCliente}>
-                        <TouchableOpacity style={styles.btn_atendimentoSuporte}>
+                        <TouchableOpacity style={styles.btn_atendimentoSuporte} onPress={btn_chatWhatsapp}>
                             <Text style={styles.textBtn}>Atendimento via Chat (Whatsapp)</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.btn_atendimentoSuporte}>
+                        <TouchableOpacity style={styles.btn_atendimentoSuporte} onPress={btn_suporteEmail}>
                             <Text style={styles.textBtn}>Suporte via (Email)</Text>
                         </TouchableOpacity>
                     </View>

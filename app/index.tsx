@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
 
     textAviso: {
         marginTop: 50,
-        fontSize: 16,
+        fontSize: 18,
         fontWeight: 'bold',
         color:'#283618',
         width: 300,
