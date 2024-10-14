@@ -13,10 +13,7 @@ export default function ScreenInicio(){
     return(
         <SafeAreaView style={styles.container}>
             <StatusBar />
-             
-            {/* <Image 
-                style={styles.imgInicial}
-            /> */}
+                <Image style={styles.Imgslogan} source={require('../../assets/img_slogan.png')}></Image>
 
                 <ScrollView>
                     <View style={styles.area_maisVendidos}>
@@ -59,16 +56,14 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#FEFAE0'
+        backgroundColor: '#FEFAE0',
     },
 
 
-    imgInicial: {
+    Imgslogan: {
         width: '100%',
-        height: 200,
-        backgroundColor: '#283618',
+        height: 250,
     },
-
 
     area_maisVendidos: {
         alignItems: 'center',
