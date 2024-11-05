@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Image, Linking, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { btn_chatWhatsapp, btn_suporteEmail } from "../../../services/links";
+import { btn_chatWhatsapp, btn_suporteEmail } from "../../services/links";
 
 export default function ScreenMenu(){
 
@@ -38,7 +38,7 @@ function mostrar4(){
                             <Text style={styles.text_bntPergunta}>Como realizar uma Compra</Text>
                             <Image 
                                 style={styles.imgBtn}
-                                source={require('../../../assets/icon_setaParaBaixo.png')}
+                                source={require('../../assets/icon_setaParaBaixo.png')}
                             />
                         </TouchableOpacity>
 
@@ -60,7 +60,7 @@ function mostrar4(){
                             <Text style={styles.text_bntPergunta}>Como devolver o Produto</Text>
                             <Image 
                                 style={styles.imgBtn}
-                                source={require('../../../assets/icon_setaParaBaixo.png')}
+                                source={require('../../assets/icon_setaParaBaixo.png')}
                             />
                         </TouchableOpacity>
 
@@ -80,7 +80,7 @@ function mostrar4(){
                             <Text style={styles.text_bntPergunta}>Quais as formas de pagamento Aceitas</Text>
                             <Image 
                                 style={styles.imgBtn}
-                                source={require('../../../assets/icon_setaParaBaixo.png')}
+                                source={require('../../assets/icon_setaParaBaixo.png')}
                             />
                         </TouchableOpacity>
 
@@ -99,7 +99,7 @@ function mostrar4(){
                             <Text style={styles.text_bntPergunta}>Locais de Entrega</Text>
                             <Image 
                                 style={styles.imgBtn}
-                                source={require('../../../assets/icon_setaParaBaixo.png')}
+                                source={require('../../assets/icon_setaParaBaixo.png')}
                             />
                         </TouchableOpacity>
 

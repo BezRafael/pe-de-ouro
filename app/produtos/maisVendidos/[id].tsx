@@ -1,54 +1,86 @@
-import { router, useLocalSearchParams } from "expo-router";
-import { getMaisVendidosById } from "../../../services/produto";
+import { useLocalSearchParams } from "expo-router";
+import { useEffect, useState } from "react";
+import { Tipo_maisVendido } from "../../../types/tipo_produto";
+import api from "../../../services/api";
+import { Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Button, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import Voltar from "../../../services/voltar";
 
-export default function ScreenProdutoId(){
+const ProdutoMaisVendido = () => {
+    const [produto, setProduto] = useState<Tipo_maisVendido | null>(null);
+    const { id } = useLocalSearchParams(); // Pega o ID da rota
 
-    const {id} = useLocalSearchParams();
-    const idProduto = parseInt(id as string)
+    useEffect(() => {
+        const fetchProduto = async () => {
+            try {
+                const response = await api.get(`/produtos/maisVendidos/${id}`);
+                setProduto(response.data.produto);
+            } catch (error) {
+                console.error("Erro ao buscar produto:", error);
+            }
+        };
 
-    const produto = getMaisVendidosById(idProduto)
+        if (id) fetchProduto();
+    }, [id]);
 
-    if(!produto) return router.back;
+    if (!produto) {
+        return <Text>Carregando...</Text>;
+    }
 
-    return(
+    return (
         <SafeAreaView style={styles.container}>
-            
-                <View style={styles.area_infoProduto}>
-                    <Image
-                        style={styles.imgProduto}
-                        source={{uri: produto.fotoProduto}}
+            <StatusBar/>
+                <TouchableOpacity style={styles.btnVoltar} onPress={Voltar}>
+                    <Image 
+                        style={styles.iconVoltar}
+                        source={require('../../../assets/icon_voltar.png')}
                     />
+                </TouchableOpacity>
 
+                <View style={styles.area_infoProduto}>
+                    <Image style={styles.imgProduto} source={{ uri: produto.fotoProduto }} />
                     <Text style={styles.nomeProduto}>{produto.nomeProduto}</Text>
                     <Text style={styles.categoriaProduto}>{produto.categoriaProduto}</Text>
                     <Text style={styles.precoProduto}>R${produto.precoProduto.toFixed(2)}</Text>
-                    
                     <TouchableOpacity style={styles.btnComprar}>
                         <Text style={styles.textBtn}>Comprar</Text>
                     </TouchableOpacity>
                 </View>
-        
         </SafeAreaView>
-    )
-}
+    );
+};
+
+export default ProdutoMaisVendido;
 
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        justifyContent: 'center',
+        justifyContent: 'space-around',
         alignItems: 'center',
         backgroundColor: '#283618'
     },
 
-    area_infoProduto: {
-        width: 320,
-        height: 450,
+    btnVoltar:{
         justifyContent: 'center',
         alignItems: 'center',
+        width: 50,
+        height: 50,
+        borderRadius: 10,
+        backgroundColor: '#dda15e',
+        marginRight: 280
+    },
 
-        borderRadius: 30
+    iconVoltar:{
+        borderWidth: 0,
+        borderColor: 'black',
+        width: 40,
+        height: 40
+    },
+
+    area_infoProduto: {
+        marginBottom: 100,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
 
     imgProduto: {
@@ -73,30 +105,12 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: 'bold',
         color: '#FEFAE0'
-        
-    },
-
-    btnFvorito:{
-        flexDirection: 'row',
-        justifyContent:'center',
-        alignItems: 'center',
-        width: 230,
-        height: 40,
-        backgroundColor: '#fefae0',
-        borderRadius: 10,
-        marginTop: 15,
-        gap: 5
     },
 
     textBtn: {
         fontSize: 18,
         fontWeight: 'bold',
         color: '#283618'
-    },
-
-    iconFavorito: {
-        width: 25,
-        height: 25
     },
 
     btnComprar: {

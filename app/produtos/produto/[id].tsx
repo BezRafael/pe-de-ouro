@@ -1,26 +1,50 @@
-import { router, useLocalSearchParams } from "expo-router";
-import { getProdutoById } from "../../../services/produto";
+import { useLocalSearchParams } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Button, Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { useEffect, useState } from "react";
+import { Tipo_produto } from "../../../types/tipo_produto";
+import api from "../../../services/api";
+import Voltar from "../../../services/voltar";
 
-export default function ScreenProdutoId(){
+export default function ScreenProdutoIndividual() {
+    const { id } = useLocalSearchParams(); // Obtendo o ID do produto da URL
+    const [produto, setProduto] = useState<Tipo_produto | null>(null);
 
-    const {id} = useLocalSearchParams();
-    const idProduto = parseInt(id as string)
+    useEffect(() => {
+        const fetchProduto = async () => {
+            try {
+                const response = await api.get(`/produtos/produto/${id}`);
+                setProduto(response.data.produto);
+            } catch (error) {
+                console.log('Erro ao buscar produto:', error);
+            }
+        };
 
-    const produto = getProdutoById(idProduto);
+        if (id) {
+            fetchProduto();
+        }
+    }, [id]);
 
-    if(!produto) return router.back;
+    if (!produto) {
+        return <Text>Carregando...</Text>;
+    }
 
-    return(
+    return (
         <SafeAreaView style={styles.conteiner}>
             <StatusBar/>
+
+                <TouchableOpacity style={styles.btnVoltar} onPress={Voltar}>
+                    <Image 
+                        style={styles.iconVoltar}
+                        source={require('../../../assets/icon_voltar.png')}
+                    />
+                </TouchableOpacity>
+
                 <View style={styles.area_infoProduto}>
                     <Image
                         style={styles.imgProduto}
                         source={{uri: produto.fotoProduto}}
                     />
-
 
                     <Text style={styles.nomeProduto}>{produto.nomeProduto}</Text>
                     <Text style={styles.categoriaProduto}>{produto.categoriaProduto}</Text>
@@ -30,25 +54,41 @@ export default function ScreenProdutoId(){
                         <Text style={styles.textBtn}>Comprar</Text>
                     </TouchableOpacity>
                 </View>
+
         </SafeAreaView>
-    )
+    );
 }
 
 const styles = StyleSheet.create({
     conteiner: {
         flex: 1,
-        justifyContent: 'center',
+        justifyContent: 'space-around',
         alignItems: 'center',
         backgroundColor: '#283618'
     },
 
-    area_infoProduto: {
-        width: 320,
-        height: 450,
+
+    btnVoltar:{
         justifyContent: 'center',
         alignItems: 'center',
+        width: 50,
+        height: 50,
+        borderRadius: 10,
+        backgroundColor: '#dda15e',
+        marginRight: 280
+    },
 
-        borderRadius: 30
+    iconVoltar:{
+        borderWidth: 0,
+        borderColor: 'black',
+        width: 40,
+        height: 40
+    },
+
+    area_infoProduto: {
+        marginBottom: 100,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
 
     imgProduto: {
@@ -108,3 +148,4 @@ const styles = StyleSheet.create({
         marginTop: 30
     }
 })
+  

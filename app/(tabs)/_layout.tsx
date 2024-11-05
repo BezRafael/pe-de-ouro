@@ -10,7 +10,7 @@ export default function TabLayout() {
             tabBarStyle: {backgroundColor: '#283618'}
         }}>
             <Tabs.Screen
-                name="inicio"
+                name="index"
                 options={{
                     title: "Inicio",
                     tabBarIcon: ({ color }) => <FontAwesome size={28} name="home" color={color} />,
@@ -26,7 +26,7 @@ export default function TabLayout() {
             />
 
             <Tabs.Screen
-                name="(menu)"
+                name="menu"
                 options={{
                     title: "Menu",
                     tabBarIcon: ({ color }) => <FontAwesome size={28} name="list-alt" color={color} />,

@@ -8,21 +8,22 @@
     "icon": "./assets/sapatos.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/brilha.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "image": "./assets/img_telaInicial_app.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#FEFAE0"
     },
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/sapatos.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/img_telaInicial_app.png",
+        "backgroundColor": "#FEFAE0"
       }
     },
     "web": {
-      "favicon": "./assets/sapatos.png"
+      "output": "server",
+      "favicon": "./assets/img_telaInicial_app.png"
     },
     "plugins": [
       "expo-router"
